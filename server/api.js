@@ -38,15 +38,20 @@ api.get('/authenticate', ( req, res, next ) => {
 	})
 	Campuses.findAll({}).then(info => res.json(info)).catch(next)
 })
+api.get('/getstudents', ( req, res, next ) => {
+	Student.findAll({})
+	       .then(info => res.json(info))
+	       .catch(next)
+})
 
-api.post('/newuser', ( req,res,next ) => {
+api.post('/newuser', ( req, res, next ) => {
 	console.log(req.body)
 	Student.create({
-		name: req.body.name,
-		email: req.body.email,
+		name  : req.body.name,
+		email : req.body.email,
 		campus: req.body.campus,
 	}).then(data => res.json(data))
-	.catch(next)
+	       .catch(next)
 
 })
 

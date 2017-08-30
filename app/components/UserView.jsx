@@ -37,7 +37,7 @@ export default class CreateStudent extends Component {
 	}
 
 	handleRedirect( res ) {
-		window.location.href = 'http://localhost:1337/#/Campuses'
+		window.location.href = 'http://localhost:1337/#/Students'
 	}
 
 	handleChangeCampus( evt ) {

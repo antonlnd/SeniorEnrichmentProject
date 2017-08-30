@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Schools from './Schools'
 import DesignForm from './Login'
 import Signup from './Signup'
+import Students from './StudentList'
 import { Provider } from 'react-redux'
 import store from '../store'
 import UserView from '../components/UserView'
@@ -20,6 +21,7 @@ export default class Main extends Component {
 						<Switch>v
 							<Route path={'/user/' + store.getState().name } component={DesignForm}/>
 							<Route exact path="/Campuses" component={Schools}/>
+							<Route exact path="/Students" component={Students}/>
 							<Route exact path="/Home" component={DesignForm}/>
 							<Route exact path="/Signup" component={UserView}/>
 						</Switch>
