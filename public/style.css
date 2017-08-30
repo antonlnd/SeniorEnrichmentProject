@@ -1,0 +1,51 @@
+
+.nav {
+    background-image: url('/chalkboard.jpg');
+    color: red;
+    border: ThreeDDarkShadow;
+    font-family: "Chalkduster";
+    nav-right: auto;
+    nav-banner-image: url("wood.png");
+
+}
+
+.page-header {
+    height: 17px;
+    border-image: url("/wood.png");
+    font-family: "Chalkduster";
+    border-width: 50px;
+    color: whitesmoke;
+}
+
+.userpass {
+    width: 25%;
+    height: 250px;
+    padding: 20px;
+    background: lightskyblue;
+    background: radial-gradient(lightgray, transparent);
+    border: chartreuse;
+    border-width: thick;
+    background-image: url('/chalkboardLogin.png');
+    background-size: cover;
+    color: lightskyblue;
+    float: right;
+    align-content: left;
+}
+
+.schools {
+    padding: 10%;
+    width: 70%;
+    float: left;
+    background: transparent ;
+    background-size: cover;
+}
+
+.signupForm {
+    width: 25%;
+    float: left;
+    border-image: url("apple.png");
+    text-align: center;
+    border-width: thick;
+    animation-timing-function: linear;
+}
+
