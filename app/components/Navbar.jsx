@@ -14,7 +14,7 @@ export default class Navbar extends Component {
 				<NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown" >
 					<MenuItem eventKey="4.1" href="/#/Signup" >Add a Student</MenuItem>
 					<MenuItem divider/>
-					<MenuItem eventKey="4.2">Add a Campus</MenuItem>
+					<MenuItem eventKey="4.2" href="/#/AddCampus" >Add a Campus</MenuItem>
 					<MenuItem eventKey="4.3">Edit Campus</MenuItem>
 					<MenuItem eventKey="4.3">Edit Student</MenuItem>
 					<MenuItem eventKey="4.3">Delete Student</MenuItem>

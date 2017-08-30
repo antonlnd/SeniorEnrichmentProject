@@ -19,6 +19,11 @@ export default class CreateStudent extends Component {
 	componentDidMount() {
 		console.log(this.state)
 		this.unsubscribe = store.subscribe(() => this.setState(store.getState()))
+
+		//Set state of available campuses
+		axios.get('/api/authenticate')
+		     .then(res => res.data)
+		     .then(campuses => this.state.data = campuses)
 	}
 
 	componentWillUnmount() {
@@ -49,22 +54,32 @@ export default class CreateStudent extends Component {
 	handleSubmit( event ) {
 		event.preventDefault()
 		const { email, name, campus } = this.state
-		console.log(email, name, campus + '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+		const campusID = 0
 
-		axios.post('/api/newuser', { email, name, campus })
-		     .then(res => res.data)
-		     .then(this.handleRedirect)
+		const id = null;
+		axios.post('/api/get_campus_id', { campus })
+			.then(res => res.data).then( info => {
+				const id = info.id
+			axios.post('/api/newuser', { email, name, id , campus })
+			     .then(res => res.data)
+			     .then(this.handleRedirect)
+		})
 
 	}
-
 	render() {
 		const handleSubmit = this.handleSubmit
 		const handleChangeEmail = this.handleChangeEmail
 		const handleChangeCampus = this.handleChangeCampus
 		const handleChangeUserName = this.handleChangeUserName
 
+		const campusOptions = this.state.data.map(( campus, index ) => {
+			return (
+				<option key={index}> {campus.name}</option>
+			)
+		})
+
 		return (
-			<Form horizontal onSubmit={handleSubmit}>
+			<Form horizontal onSubmit={handleSubmit} >
 				<h1>Add a Student to a Campus</h1>
 				<FormGroup controlId="formHorizontalEmail" onChange={handleChangeEmail}>
 					<Col componentClass={ControlLabel} sm={2}>
@@ -84,16 +99,18 @@ export default class CreateStudent extends Component {
 				</FormGroup>
 
 				<FormGroup controlId="formHorizontalCampus" onChange={handleChangeCampus}>
+
 					<Col componentClass={ControlLabel} sm={2}>
 						Student Campus
+						<select>
+							{campusOptions}
+						</select>
 					</Col>
-					<Col sm={10}>
-						<FormControl type="text" placeholder="Lagunita"/>
-					</Col>
+
 				</FormGroup>
 
 				<FormGroup>
-					<Col smOffset={2} sm={10}>
+					<Col xs={6} md={4} >
 						<Button type="submit">
 							Create Student!
 						</Button>

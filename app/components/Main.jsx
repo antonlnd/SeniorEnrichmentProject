@@ -8,6 +8,7 @@ import Students from './StudentList'
 import { Provider } from 'react-redux'
 import store from '../store'
 import UserView from '../components/UserView'
+import CreateCampus from '../components/CreateCampus'
 
 export default class Main extends Component {
 
@@ -24,6 +25,7 @@ export default class Main extends Component {
 							<Route exact path="/Students" component={Students}/>
 							<Route exact path="/Home" component={DesignForm}/>
 							<Route exact path="/Signup" component={UserView}/>
+							<Route exact path="/AddCampus" component={CreateCampus}/>
 						</Switch>
 					</div>
 				</Router>

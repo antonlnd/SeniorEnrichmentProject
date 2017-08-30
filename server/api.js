@@ -6,7 +6,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json()) // handle json data
 app.use(bodyParser.urlencoded({ extended: true }))
 const Sequelize = require('sequelize')
-const Campuses = require('../db/models/Campus.js')
+const Campus = require('../db/models/Campus.js')
 const Student = require('../db/models/Students.js')
 
 // If you aren't getting to this object, but rather the index.html (something with a joke) your path is wrong.
@@ -23,7 +23,7 @@ const Student = require('../db/models/Students.js')
 
 // api.get('/authenticate', (res ) => {
 //
-// 	Campuses.findOrBuild({
+// 	Campus.findOrBuild({
 // 		where: {
 // 			name: 'anton landauer',
 // 			image: 'www.gooooooooooooooooooogle.com'
@@ -32,12 +32,11 @@ const Student = require('../db/models/Students.js')
 //
 
 api.get('/authenticate', ( req, res, next ) => {
-	Campuses.create({
-		name : 'Harvard',
-		image: './harvard.png',
-	})
-	Campuses.findAll({}).then(info => res.json(info)).catch(next)
+	Campus.findAll({})
+	        .then(info => res.json(info))
+	        .catch(next)
 })
+
 api.get('/getstudents', ( req, res, next ) => {
 	Student.findAll({})
 	       .then(info => res.json(info))
@@ -45,13 +44,29 @@ api.get('/getstudents', ( req, res, next ) => {
 })
 
 api.post('/newuser', ( req, res, next ) => {
-	console.log(req.body)
 	Student.create({
 		name  : req.body.name,
 		email : req.body.email,
-		campus: req.body.campus,
+		CampusId: req.body.id,
+		campus:  req.body.campus
 	}).then(data => res.json(data))
 	       .catch(next)
+})
+
+api.post('/newcampus', ( req, res, next ) => {
+	console.log(req.body)
+	Campus.create({
+		name : req.body.campus,
+		image: req.body.image,
+	}).then(data => res.json(data))
+	        .catch(next)
+
+})
+
+api.post('/get_campus_id', ( req, res, next ) => {
+	Campus.findOne({where: {name: req.body.campus}})
+	.then(data => res.json(data))
+	        .catch(next)
 
 })
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import { Table } from 'react-bootstrap'
 import axios from 'axios'
 
@@ -19,11 +20,15 @@ export default class Students extends Component {
 
 	render() {
 		const students = this.state.students.map(( val, index ) => {
-			return (<tr key={index}>
+			return (<tr key={index} >
 				<td>{val.id}</td>
-				<td>{val.name}</td>
-				<td>{val.email}</td>
-				<td>{val.campus}</td>
+				<td >
+                   <a href={`/#/Students/${index}`}>  {val.name} </a>
+                </td>
+				<td>
+				  <a href={`/#/Students/${index}`}> {val.email}</a>
+				  </td>
+				<td><a href={`/#/Students/${index}`}> {val.campus}</a></td>
 			</tr>
 			)
 		})

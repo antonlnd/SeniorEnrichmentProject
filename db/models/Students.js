@@ -9,6 +9,7 @@ const Student = db.define('Student', {
 	campus: Sequelize.STRING,
 	password: {
 		type: Sequelize.STRING,
-	}
+	},
+
 })
 module.exports = Student

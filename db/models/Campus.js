@@ -10,6 +10,7 @@ const Campus = db.define('Campus', {
 	}
 })
 
-Student.belongsTo(Campus)
+Campus.hasMany(Student)
+
 
 module.exports = Campus

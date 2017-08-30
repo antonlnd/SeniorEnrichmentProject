@@ -19,7 +19,7 @@ require('./models/Campus')
 
 // sync the db, creating it if necessary
 function sync( force = true, retries = 0, maxRetries = 5 ) {
-	return db.sync().then(ok => console.log(`Synced models to db ${connectionString}`)).catch(fail => {/* Don't do this auto-create nonsense in prod, or if we've retried too many times.*/
+	return db.sync({force}).then(ok => console.log(`Synced models to db ${connectionString}`)).catch(fail => {/* Don't do this auto-create nonsense in prod, or if we've retried too many times.*/
 		if (process.env.NODE_ENV === 'production' || retries > maxRetries) {
 			console.error(chalk.red('********** database error ***********'))
 			console.error(chalk.red(`    Couldn't connect to ${connectionString}`))
