@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658d6e2f-02f1-405b-9f17-af558dc829ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/DetailedStudent.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/seed.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/StudentList.jsx" afterPath="$PROJECT_DIR$/app/components/StudentList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/index.js" afterPath="$PROJECT_DIR$/db/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/models/Students.js" afterPath="$PROJECT_DIR$/db/models/Students.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api.js" afterPath="$PROJECT_DIR$/server/api.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,8 +38,8 @@
       <file leaf-file-name="StudentList.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/StudentList.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="432">
+              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -427,11 +419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503973796495</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-- Seed file in /server/ for seeding student and campus with dummy data&#10;&#10;-- delete functionality in all student view&#10;&#10;todo: edit , single page for students and campus">
+      <created>1504200035482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504200035482</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99807000" />
+    <option name="totallyTimeSpent" value="99883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-349" y="-1080" width="1920" height="1080" extended-state="6" />
@@ -494,7 +493,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="-- Seed file in /server/ for seeding student and campus with dummy data&#10;&#10;-- delete functionality in all student view&#10;&#10;todo: edit , single page for students and campus" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- Seed file in /server/ for seeding student and campus with dummy data&#10;&#10;-- delete functionality in all student view&#10;&#10;todo: edit , single page for students and campus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,8 +924,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/StudentList.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="432">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding />
         </state>
       </provider>
