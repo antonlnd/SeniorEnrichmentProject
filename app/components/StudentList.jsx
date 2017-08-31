@@ -12,7 +12,6 @@ export default class Students extends Component {
 
 	handleDelete( evt )  {
 	      const data = evt.target.value
-
 	       axios.post('/api/delete', {data} )
 	        .then(res => res.data)
 	           .then(window.location.reload())
@@ -25,7 +24,7 @@ export default class Students extends Component {
 			     this.setState({ students })
 		     })
 
-		     console.log(this.getState , '!!!!!!!!!!!')
+
 
 	}
 
@@ -34,10 +33,10 @@ export default class Students extends Component {
 			return (<tr key={index} >
 				<td>{val.id}</td>
 				<td >
-                   <a href={`/#/Students/${index}`}>  {val.name} </a>
+                   <a href={`/#/single/${val.email}/${val.CampusId}`}>  {val.name} </a>
                 </td>
 				<td>
-				  <a href={`/#/Students/${index}`}> {val.email}</a>
+				  <a href={`/#/single/${val.email}/${val.CampusId}`}> {val.email}</a>
 				   </td>
 				   <td>
 				    <Button bsStyle="info"  bsSize="xs" >Edit</Button>

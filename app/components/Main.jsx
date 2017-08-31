@@ -9,6 +9,8 @@ import { Provider } from 'react-redux'
 import store from '../store'
 import UserView from '../components/UserView'
 import CreateCampus from '../components/CreateCampus'
+import DetailedStudent from '../components/DetailedStudent'
+import DetailedCampus from '../components/DetailedCampus'
 
 export default class Main extends Component {
 
@@ -19,10 +21,12 @@ export default class Main extends Component {
 				<Router>
 					<div id="main" className="container-fluid">
 						<Route path="/" component={Navbar}/>
-						<Switch>v
+						<Switch>
 							<Route path={'/user/' + store.getState().name } component={DesignForm}/>
 							<Route exact path="/Campuses" component={Schools}/>
 							<Route exact path="/Students" component={Students}/>
+							<Route  path="/single/" component={DetailedStudent}/>
+							<Route  path="/campusid/" component={DetailedCampus}/>
 							<Route exact path="/Home" component={DesignForm}/>
 							<Route exact path="/Signup" component={UserView}/>
 							<Route exact path="/AddCampus" component={CreateCampus}/>

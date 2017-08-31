@@ -9,28 +9,6 @@ const Sequelize = require('sequelize')
 const Campus = require('../db/models/Campus.js')
 const Student = require('../db/models/Students.js')
 
-// If you aren't getting to this object, but rather the index.html (something with a joke) your path is wrong.
-// I know this because we automatically send index.html for all requests that don't make sense in our backend.
-// Ideally you would have something to handle this, so if you have time try that out!
-// api.get('/hello', (req, res) => res.send({hello: 'world'}))
-// api.get('/login'), (req, res) => {
-// 	db.findAll({
-// 		where: {
-// 			ie: req.body.password ===
-// 		}
-// 	})
-// }
-
-// api.get('/authenticate', (res ) => {
-//
-// 	Campus.findOrBuild({
-// 		where: {
-// 			name: 'anton landauer',
-// 			image: 'www.gooooooooooooooooooogle.com'
-// 		}}).then(resul => console.log('synced'))
-// })
-//
-
 api.get('/authenticate', ( req, res, next ) => {
 	Campus.findAll({})
 	      .then(info => res.json(info))
@@ -78,6 +56,30 @@ api.post('/newcampus', ( req, res, next ) => {
 
 })
 
+api.post('/singlestudent', ( req, res, next ) => {
+	const id = req.body.thisId
 
+	Campus.findById(id)
+	      .then(data => res.json(data))
+
+})
+
+api.post('/singlestudentid', ( req, res, next ) => {
+	Student.findOne({where: {email: req.body.thisStudentId}})
+	       .then(data => res.json(data))
+	       .catch(next)
+
+})
+
+api.post('/singlecampus', ( req, res, next ) => {
+	const campusId = req.body.campusId
+	Student.findAll({
+		where: {
+			CampusId : campusId
+		}})
+	       .then(data => res.json(data))
+	       .catch(next)
+
+})
 
 module.exports = api

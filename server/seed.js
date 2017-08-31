@@ -3,6 +3,7 @@ const Sequelize = require('sequelize')
 const Campus = require('../db/models/Campus.js')
 const Student = require('../db/models/Students.js')
 const Chance = require('chance')
+const randomCat = require('random-cat')
 const chance = new Chance()
 
 
@@ -15,12 +16,17 @@ const studentCampusId = []
 const campusName = []
 const campusImage = []
 const promises = []
+
+
+
 for (var i = 0; i < 50; i++) {
 	campusName
 		.push(` ${chance.capitalize(chance.company()).split('Inc' || 'Corp' || '&').join(' ').split(' ')[1]}  ${chance.capitalize(chance.profession()).split(' ')[0]} University`)
 
 	campusImage
-		.push(`http:${chance.avatar()}`)
+		.push(`${randomCat.get({
+			category: 'people'
+		})}`)
 }
 
 campusName.map(( val, idx ) => {

@@ -1,76 +1,77 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Table , Button} from 'react-bootstrap'
+import { Body, Button, Heading, Left, Media, PageHeader } from 'react-bootstrap'
 import axios from 'axios'
 
 export default class Students extends Component {
 	constructor( props ) {
 		super(props)
-		this.state = { students: [] , campuses : []}
-		this.getCampus = this.getCampus.bind(this)
+		this.state = { students: [], campuses: {}, deleteUser: '' }
+		this.handleDelete = this.handleDelete.bind(this)
+	}
+
+	handleDelete( evt ) {
+		const data = evt.target.valueaxios.post('/api/delete', { data })
+		                .then(res => res.data)
+		                .then(window.location.reload())
 	}
 
 	componentDidMount() {
-		axios.get('/api/getstudents')
-		     .then(res => res.data)
-		     .then(students => {
-			     this.setState({ students })
-		     })
+		const url = window.location.href.split('/')
+		const thisId = url[(url.length) - 1]
+		const thisStudentId = url[(url.length) - 2]
+		console.log(thisStudentId , "!!!!!!!!!!!!!")
 
-		console.log(this.getState , '!!!!!!!!!!!')
+		//get campus info for current student
+		axios.post('/api/singlestudent', {
+			thisId,
+			thisStudentId
+		}).then(res => res.data).then(campuses => {
+			console.log(campuses)
+			this.setState({ campuses })
+		})
 
+		//get student info for current student
+		axios.post('/api/singlestudentid', { thisStudentId }).then(res => res.data).then(students => {
+			console.log(students)
+			this.setState({ students })
+		})
 	}
-	getCampus (val)  {
 
-		axios.post('/api/get_campus_id', val)
+	handleDelete( evt )  {
+		const data = evt.target.value
+		console.log(data)
+		axios.post('/api/delete', {data} )
 		     .then(res => res.data)
-		     .then(students => {
-			     console.log(students)
-		     })
-
+		     .then(window.location.href = 'http://localhost:1337/#/Students')
 	}
 
 	render() {
-		console.log(this.getCampus(25))
-		const students = this.state.students.map(( val, index ) => {
-			return (<tr key={index} >
-					<td>{val.id}</td>
-					<td >
-						<a href={`/#/Students/${index}`}>  {val.name} </a>
-					</td>
-					<td>
-						<a href={`/#/Students/${index}`}> {val.email}</a>
-					</td>
-					<td>
-						<a href={`/#/Students/${val.CampusId}`} color="red"> Edit </a>
-					</td>
-					<td>
-						<a href={`/#/Students/${val.CampusId}`} color="red"> Delete </a>
-					</td>
-				</tr>
-			)
-		})
+		const students = this.state.students
+		const campuses = this.state.campuses
+
+		console.log(students, campuses)
 
 		return (
 			<div>
-				<h1>All Students</h1>
-				<Table striped bordered condensed hover className="schools">
-					<thead>
-					<tr>
-						<th>#</th>
-						<th> Student Name</th>
-						<th> Student Email</th>
-						<th> Edit </th>
-						<th > Delete </th>
-					</tr>
-					</thead>
-					<tbody>
-					{students}
-					</tbody>
-				</Table>
+				<PageHeader>
+					<small>{students.name} Profile</small>
+				</PageHeader>
+				<Media>
+					<Media.Left>
+						<img width={200} height={200} src={campuses.image} alt={campuses.name}/>
+					</Media.Left>
+					<Media.Body>
+						<Media.Heading> {students.name} </Media.Heading>
+						<p>Email: {students.email}</p>
+						<p>Campus: <a href={`/#/campusid/${campuses.id}`}>{campuses.name}</a></p>
+						<p><Button bsStyle="info" bsSize="xs">Edit</Button></p>
+						<p><Button bsStyle="danger" bsSize="xs"  value= {students.name} onClick={this.handleDelete.bind(this)}>Delete</Button>
+						</p>
+
+					</Media.Body>
+				</Media>
 			</div>
 		)
 	}
 }
-
-
