@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Table } from 'react-bootstrap'
+import { Table , Button} from 'react-bootstrap'
 import axios from 'axios'
 
 export default class Students extends Component {
 	constructor( props ) {
 		super(props)
-		this.state = { students: [] }
+		this.state = { students: [] , campuses : {}, deleteUser:''}
+        this.handleDelete = this.handleDelete.bind(this)
+	}
+
+	handleDelete( evt )  {
+	      const data = evt.target.value
+
+	       axios.post('/api/delete', {data} )
+	        .then(res => res.data)
+	           .then(window.location.reload())
 	}
 
 	componentDidMount() {
@@ -15,6 +24,8 @@ export default class Students extends Component {
 		     .then(students => {
 			     this.setState({ students })
 		     })
+
+		     console.log(this.getState , '!!!!!!!!!!!')
 
 	}
 
@@ -27,8 +38,13 @@ export default class Students extends Component {
                 </td>
 				<td>
 				  <a href={`/#/Students/${index}`}> {val.email}</a>
+				   </td>
+				   <td>
+				    <Button bsStyle="info"  bsSize="xs" >Edit</Button>
 				  </td>
-				<td><a href={`/#/Students/${index}`}> {val.campus}</a></td>
+				  <td>
+                    <Button bsStyle="danger" value={val.name} bsSize="xs" onClick={this.handleDelete.bind(this)}>Delete</Button>
+				  </td>
 			</tr>
 			)
 		})
@@ -42,7 +58,8 @@ export default class Students extends Component {
 							<th>#</th>
 							<th> Student Name</th>
 							<th> Student Email</th>
-							<th> Student Campus</th>
+							<th>  </th>
+							<th >  </th>
 						</tr>
 					</thead>
 					<tbody>

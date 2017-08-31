@@ -33,8 +33,25 @@ const Student = require('../db/models/Students.js')
 
 api.get('/authenticate', ( req, res, next ) => {
 	Campus.findAll({})
-	        .then(info => res.json(info))
-	        .catch(next)
+	      .then(info => res.json(info))
+	      .catch(next)
+})
+
+api.get('/get_campus_id', ( req, res, next ) => {
+	console.log(req.body)
+	Campus.findById(req.body.val)
+	      .then(( data ) => res.json(data))
+	      .catch(next)
+})
+
+api.post('/delete', ( req, res, next ) => {
+	console.log(req.body)
+
+	Student.find({
+		where: {
+			name: req.body.data
+		}
+	}).then((info) => info.destroy() ).then(console.log)
 })
 
 api.get('/getstudents', ( req, res, next ) => {
@@ -45,10 +62,10 @@ api.get('/getstudents', ( req, res, next ) => {
 
 api.post('/newuser', ( req, res, next ) => {
 	Student.create({
-		name  : req.body.name,
-		email : req.body.email,
+		name    : req.body.name,
+		email   : req.body.email,
 		CampusId: req.body.id,
-		campus:  req.body.campus
+		campus  : req.body.campus
 	}).then(data => res.json(data))
 	       .catch(next)
 })
@@ -59,14 +76,14 @@ api.post('/newcampus', ( req, res, next ) => {
 		name : req.body.campus,
 		image: req.body.image,
 	}).then(data => res.json(data))
-	        .catch(next)
+	      .catch(next)
 
 })
 
 api.post('/get_campus_id', ( req, res, next ) => {
-	Campus.findOne({where: {name: req.body.campus}})
-	.then(data => res.json(data))
-	        .catch(next)
+	Campus.findOne({ where: { name: req.body.campus } })
+	      .then(data => res.json(data))
+	      .catch(next)
 
 })
 
