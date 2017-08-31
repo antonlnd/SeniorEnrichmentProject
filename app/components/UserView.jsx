@@ -53,19 +53,15 @@ export default class CreateStudent extends Component {
 
 	handleSubmit( event ) {
 		event.preventDefault()
-		const { email, name, campus } = this.state
-		const campusID = 0
+		console.log(event.target.value)
+		const { email, name, campus} = this.state
 
-		const id = null;
-		axios.post('/api/get_campus_id', { campus })
-			.then(res => res.data).then( info => {
-				const id = info.id
-			axios.post('/api/newuser', { email, name, id , campus })
-			     .then(res => res.data)
-			     .then(this.handleRedirect)
-		})
 
+		axios.post('/api/newuser', { email, name, campus })
+		     .then(res => res.data)
+		     .then(this.handleRedirect)
 	}
+
 	render() {
 		const handleSubmit = this.handleSubmit
 		const handleChangeEmail = this.handleChangeEmail
@@ -74,12 +70,12 @@ export default class CreateStudent extends Component {
 
 		const campusOptions = this.state.data.map(( campus, index ) => {
 			return (
-				<option key={index}> {campus.name}</option>
+				<option key={index} value={campus.id}> {campus.name}</option>
 			)
 		})
 
 		return (
-			<Form horizontal onSubmit={handleSubmit} >
+			<Form horizontal onSubmit={handleSubmit}>
 				<h1>Add a Student to a Campus</h1>
 				<FormGroup controlId="formHorizontalEmail" onChange={handleChangeEmail}>
 					<Col componentClass={ControlLabel} sm={2}>
@@ -110,7 +106,7 @@ export default class CreateStudent extends Component {
 				</FormGroup>
 
 				<FormGroup>
-					<Col xs={6} md={4} >
+					<Col xs={6} md={4}>
 						<Button type="submit">
 							Create Student!
 						</Button>
@@ -121,4 +117,4 @@ export default class CreateStudent extends Component {
 	}
 }
 
-//
+

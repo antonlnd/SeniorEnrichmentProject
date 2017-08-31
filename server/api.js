@@ -37,7 +37,7 @@ api.get('/authenticate', ( req, res, next ) => {
 	      .catch(next)
 })
 
-api.get('/get_campus_id', ( req, res, next ) => {
+api.post('/get_campus_id', ( req, res, next ) => {
 	console.log(req.body)
 	Campus.findById(req.body.val)
 	      .then(( data ) => res.json(data))
@@ -51,7 +51,7 @@ api.post('/delete', ( req, res, next ) => {
 		where: {
 			name: req.body.data
 		}
-	}).then((info) => info.destroy() ).then(console.log)
+	}).then(( info ) => info.destroy()).then(console.log)
 })
 
 api.get('/getstudents', ( req, res, next ) => {
@@ -64,14 +64,12 @@ api.post('/newuser', ( req, res, next ) => {
 	Student.create({
 		name    : req.body.name,
 		email   : req.body.email,
-		CampusId: req.body.id,
-		campus  : req.body.campus
+		CampusId: req.body.campus,
 	}).then(data => res.json(data))
 	       .catch(next)
 })
 
 api.post('/newcampus', ( req, res, next ) => {
-	console.log(req.body)
 	Campus.create({
 		name : req.body.campus,
 		image: req.body.image,
@@ -80,11 +78,6 @@ api.post('/newcampus', ( req, res, next ) => {
 
 })
 
-api.post('/get_campus_id', ( req, res, next ) => {
-	Campus.findOne({ where: { name: req.body.campus } })
-	      .then(data => res.json(data))
-	      .catch(next)
 
-})
 
 module.exports = api
