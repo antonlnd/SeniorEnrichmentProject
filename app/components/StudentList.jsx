@@ -8,13 +8,8 @@ export default class Students extends Component {
 		super(props)
 		this.state = { students: [] , campuses : {}, deleteUser:''}
         this.handleDelete = this.handleDelete.bind(this)
-	}
+        this.handleUpdate = this.handleUpdate.bind(this)
 
-	handleDelete( evt )  {
-	      const data = evt.target.value
-	       axios.post('/api/delete', {data} )
-	        .then(res => res.data)
-	           .then(window.location.reload())
 	}
 
 	componentDidMount() {
@@ -25,6 +20,18 @@ export default class Students extends Component {
 		     })
 
 
+
+	}
+
+	handleDelete( evt )  {
+	      const data = evt.target.value
+	       axios.post('/api/delete', {data} )
+	        .then(res => res.data)
+	           .then(window.location.reload())
+	}
+
+	handleUpdate( evt )  {
+	      		window.location.href = 'http://localhost:1337/#/updatestudent'
 
 	}
 
@@ -39,7 +46,7 @@ export default class Students extends Component {
 				  <a href={`/#/single/${val.email}/${val.CampusId}`}> {val.email}</a>
 				   </td>
 				   <td>
-				    <Button bsStyle="info"  bsSize="xs" >Edit</Button>
+				    <Button bsStyle="info"  bsSize="xs" onClick={this.handleUpdate.bind(this)} >Edit</Button>
 				  </td>
 				  <td>
                     <Button bsStyle="danger" value={val.name} bsSize="xs" onClick={this.handleDelete.bind(this)}>Delete</Button>

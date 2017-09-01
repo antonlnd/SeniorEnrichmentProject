@@ -8,19 +8,21 @@ export default class Students extends Component {
 		super(props)
 		this.state = { students: [], campuses: {}, deleteUser: '' }
 		this.handleDelete = this.handleDelete.bind(this)
+		this.handleUpdate = this.handleUpdate.bind(this)
 	}
 
 	handleDelete( evt ) {
-		const data = evt.target.valueaxios.post('/api/delete', { data })
-		                .then(res => res.data)
-		                .then(window.location.reload())
+		const data = evt.target.value
+		axios.post('/api/delete', { data })
+		     .then(res => res.data)
+		     .then(window.location.reload())
 	}
 
 	componentDidMount() {
 		const url = window.location.href.split('/')
 		const thisId = url[(url.length) - 1]
 		const thisStudentId = url[(url.length) - 2]
-		console.log(thisStudentId , "!!!!!!!!!!!!!")
+		console.log(thisStudentId, '!!!!!!!!!!!!!')
 
 		//get campus info for current student
 		axios.post('/api/singlestudent', {
@@ -38,12 +40,16 @@ export default class Students extends Component {
 		})
 	}
 
-	handleDelete( evt )  {
+	handleDelete( evt ) {
 		const data = evt.target.value
 		console.log(data)
-		axios.post('/api/delete', {data} )
+		axios.post('/api/delete', { data })
 		     .then(res => res.data)
 		     .then(window.location.href = 'http://localhost:1337/#/Students')
+	}
+
+	handleUpdate( evt ) {
+		window.location.href = 'http://localhost:1337/#/updatestudent'
 	}
 
 	render() {
@@ -65,8 +71,10 @@ export default class Students extends Component {
 						<Media.Heading> {students.name} </Media.Heading>
 						<p>Email: {students.email}</p>
 						<p>Campus: <a href={`/#/campusid/${campuses.id}`}>{campuses.name}</a></p>
-						<p><Button bsStyle="info" bsSize="xs">Edit</Button></p>
-						<p><Button bsStyle="danger" bsSize="xs"  value= {students.name} onClick={this.handleDelete.bind(this)}>Delete</Button>
+						<p><Button bsStyle="info" bsSize="xs" value={students.name}
+						           onClick={this.handleUpdate.bind(this)}>Edit</Button></p>
+						<p><Button bsStyle="danger" bsSize="xs" value={students.name}
+						           onClick={this.handleDelete.bind(this)}>Delete</Button>
 						</p>
 
 					</Media.Body>

@@ -31,6 +31,45 @@ api.post('/delete', ( req, res, next ) => {
 		}
 	}).then(( info ) => info.destroy()).then(console.log)
 })
+api.post('/deleteCampus', ( req, res, next ) => {
+	console.log(req.body)
+
+	Campus.find({
+		where: {
+			id: req.body.data
+		}
+	}).then(( info ) => info.destroy()).then(console.log)
+})
+
+api.put('/updateuser', (req, res , next)   => {
+
+	const name =  req.body.name
+	const username = req.body.username
+	const campus = req.body.campus
+	const email = req.body.email
+
+	Student.update({
+		name: name,
+		CampusId: campus,
+		email: email
+	}, {
+		where: {id: username},
+	}).then(updated => res.json(updated))
+
+} )
+
+
+
+
+api.post('/update/:studentId', ( req, res, next ) => {                                                   4
+	console.log(req.params.studentId)
+
+	// Student.find({
+	// 	where: {
+	// 		name: req.body.data
+	// 	}
+	// }).then(( info ) => info.destroy()).then(console.log)
+})
 
 api.get('/getstudents', ( req, res, next ) => {
 	Student.findAll({})

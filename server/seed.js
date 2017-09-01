@@ -55,18 +55,3 @@ studentEmail.map(( val, idx ) => {
 })
 
 Promise.all(promises).then(console.log)
-
-// Campus.create({
-//
-// 	name: chance.name(),
-// 	email:  chance.email(),
-// 	CampusId: Math.floor(Math.random() * 50)
-//
-// 	})
-// Student.create({
-// 	name: chance.name(),
-// 	email:  chance.email(),
-// 	CampusId: Math.floor(Math.random() * 50)
-// })
-//
-//

@@ -11,6 +11,8 @@ import UserView from '../components/UserView'
 import CreateCampus from '../components/CreateCampus'
 import DetailedStudent from '../components/DetailedStudent'
 import DetailedCampus from '../components/DetailedCampus'
+import EditUser from '../components/EditUser'
+import EditCampus from '../components/EditCampus'
 
 export default class Main extends Component {
 
@@ -27,6 +29,8 @@ export default class Main extends Component {
 							<Route exact path="/Students" component={Students}/>
 							<Route  path="/single/" component={DetailedStudent}/>
 							<Route  path="/campusid/" component={DetailedCampus}/>
+							<Route  path="/updatestudent/" component={EditUser}/>
+							<Route  path="/updatecampus/" component={EditCampus}/>
 							<Route exact path="/Home" component={DesignForm}/>
 							<Route exact path="/Signup" component={UserView}/>
 							<Route exact path="/AddCampus" component={CreateCampus}/>
