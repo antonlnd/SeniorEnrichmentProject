@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './Navbar'
 import Schools from './Schools'
-import DesignForm from './Login'
-import Signup from './Signup'
 import Students from './StudentList'
 import { Provider } from 'react-redux'
 import store from '../store'
@@ -24,14 +22,12 @@ export default class Main extends Component {
 					<div id="main" className="container-fluid">
 						<Route path="/" component={Navbar}/>
 						<Switch>
-							<Route path={'/user/' + store.getState().name } component={DesignForm}/>
 							<Route exact path="/Campuses" component={Schools}/>
 							<Route exact path="/Students" component={Students}/>
 							<Route  path="/single/" component={DetailedStudent}/>
 							<Route  path="/campusid/" component={DetailedCampus}/>
 							<Route  path="/updatestudent/" component={EditUser}/>
 							<Route  path="/updatecampus/" component={EditCampus}/>
-							<Route exact path="/Home" component={DesignForm}/>
 							<Route exact path="/Signup" component={UserView}/>
 							<Route exact path="/AddCampus" component={CreateCampus}/>
 						</Switch>
@@ -41,4 +37,3 @@ export default class Main extends Component {
 		)
 	}
 }
-{/*<Route exact path="/Students"  />*/}

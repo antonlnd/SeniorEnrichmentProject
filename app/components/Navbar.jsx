@@ -10,7 +10,7 @@ export default class Navbar extends Component {
 				<NavItem eventKey="1" href="/#/Home">Home</NavItem>
 				<NavItem eventKey="2" title="Item" href="/#/Students">View Students</NavItem>
 				<NavItem eventKey="2" title="Item" href="/#/Campuses">View Campuses</NavItem>
-				<NavDropdown eventKey="4" title="Dropdown" id="nav-dropdown" >
+				<NavDropdown eventKey="4" title="Add / Edit Students & Campuses" id="nav-dropdown" >
 					<MenuItem eventKey="4.1" href="/#/Signup" >Add a Student</MenuItem>
 					<MenuItem divider/>
 					<MenuItem eventKey="4.2" href="/#/AddCampus" >Add a Campus</MenuItem>

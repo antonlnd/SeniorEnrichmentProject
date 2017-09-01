@@ -68,7 +68,7 @@ export default class CreateCampus extends Component {
 				</FormGroup>
 				<FormGroup controlId="formHorizontalHref" onChange={handleChangeImageHREF}>
 					<Col componentClass={ControlLabel} sm={2}>
-							Enter an Image (hyperlink) for your campus!
+						Enter an Image (hyperlink) for your campus!
 					</Col>
 					<Col sm={10}>
 						<FormControl type="text" placeholder="www.google.com"/>
@@ -87,5 +87,3 @@ export default class CreateCampus extends Component {
 		)
 	}
 }
-
-//

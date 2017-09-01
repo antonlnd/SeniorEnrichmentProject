@@ -54,10 +54,10 @@ export default class CreateStudent extends Component {
 	handleSubmit( event ) {
 		event.preventDefault()
 		console.log(event.target.value)
-		const { email, name, campus} = this.state
+		const { email, username, campus} = this.state
+console.log(username)
 
-
-		axios.post('/api/newuser', { email, name, campus })
+		axios.post('/api/newuser', { email, username, campus })
 		     .then(res => res.data)
 		     .then(this.handleRedirect)
 	}

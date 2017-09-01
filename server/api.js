@@ -93,8 +93,9 @@ api.get('/getstudents', ( req, res, next ) => {
 })
 
 api.post('/newuser', ( req, res, next ) => {
+	console.log(req.body.username)
 	Student.create({
-		name    : req.body.name,
+		name    : req.body.username,
 		email   : req.body.email,
 		CampusId: req.body.campus,
 	}).then(data => res.json(data))
