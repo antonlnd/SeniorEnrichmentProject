@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658d6e2f-02f1-405b-9f17-af558dc829ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/EditCampus.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/EditUser.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/DetailedCampus.jsx" afterPath="$PROJECT_DIR$/app/components/DetailedCampus.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/DetailedStudent.jsx" afterPath="$PROJECT_DIR$/app/components/DetailedStudent.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Main.jsx" afterPath="$PROJECT_DIR$/app/components/Main.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/EditCampus.jsx" afterPath="$PROJECT_DIR$/app/components/EditCampus.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Navbar.jsx" afterPath="$PROJECT_DIR$/app/components/Navbar.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Schools.jsx" afterPath="$PROJECT_DIR$/app/components/Schools.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/StudentList.jsx" afterPath="$PROJECT_DIR$/app/components/StudentList.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store.jsx" afterPath="$PROJECT_DIR$/app/store.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/style.css" afterPath="$PROJECT_DIR$/public/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api.js" afterPath="$PROJECT_DIR$/server/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/seed.js" afterPath="$PROJECT_DIR$/server/seed.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,26 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DetailedCampus.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/DetailedCampus.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="56" lean-forward="true" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
-              <folding>
-                <element signature="e#506#972#0" expanded="false" />
-                <element signature="e#749#795#0" expanded="false" />
-                <element signature="e#895#967#0" expanded="false" />
-                <element signature="e#1427#1582#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Schools.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/Schools.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="688">
+              <caret line="52" column="128" lean-forward="false" selection-start-line="52" selection-start-column="128" selection-end-line="52" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -64,8 +44,8 @@
       <file leaf-file-name="EditCampus.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/EditCampus.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+            <state relative-caret-position="384">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,18 +64,18 @@
       <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="297">
+              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditUser.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EditUser.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/EditUser.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-759">
-              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="59" />
+            <state relative-caret-position="394">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="63" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -104,34 +84,8 @@
       <file leaf-file-name="store.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/store.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="923">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/seed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-              <folding>
-                <element signature="e#475#734#0" expanded="false" />
-                <element signature="e#701#728#0" expanded="false" />
-                <element signature="e#767#840#0" expanded="false" />
-                <element signature="e#874#1009#0" expanded="false" />
-                <element signature="e#1046#1170#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentList.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/components/StudentList.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            <state relative-caret-position="901">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,9 +94,44 @@
       <file leaf-file-name="Main.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/Main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="464">
+              <caret line="29" column="81" lean-forward="true" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Navbar.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/components/Navbar.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="448">
+                <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -210,7 +199,6 @@
         <option value="$PROJECT_DIR$/app/components/Signup.jsx" />
         <option value="$PROJECT_DIR$/app/components/Campuses.jsx" />
         <option value="$PROJECT_DIR$/app/main.jsx" />
-        <option value="$PROJECT_DIR$/app/components/Navbar.jsx" />
         <option value="$PROJECT_DIR$/db/models/Campus.js" />
         <option value="$PROJECT_DIR$/app/components/CreateCampus.jsx" />
         <option value="$PROJECT_DIR$/db/models/Students.js" />
@@ -218,15 +206,16 @@
         <option value="$PROJECT_DIR$/db/index.js" />
         <option value="$PROJECT_DIR$/server/seed.js" />
         <option value="$PROJECT_DIR$/app/components/DetailedStudent.jsx" />
-        <option value="$PROJECT_DIR$/public/style.css" />
-        <option value="$PROJECT_DIR$/app/store.jsx" />
         <option value="$PROJECT_DIR$/app/components/EditUser.jsx" />
         <option value="$PROJECT_DIR$/app/components/StudentList.jsx" />
         <option value="$PROJECT_DIR$/app/components/DetailedCampus.jsx" />
+        <option value="$PROJECT_DIR$/app/components/Main.jsx" />
+        <option value="$PROJECT_DIR$/app/store.jsx" />
         <option value="$PROJECT_DIR$/server/api.js" />
         <option value="$PROJECT_DIR$/app/components/Schools.jsx" />
-        <option value="$PROJECT_DIR$/app/components/Main.jsx" />
         <option value="$PROJECT_DIR$/app/components/EditCampus.jsx" />
+        <option value="$PROJECT_DIR$/app/components/Navbar.jsx" />
+        <option value="$PROJECT_DIR$/public/style.css" />
       </list>
     </option>
   </component>
@@ -430,7 +419,7 @@
       <workItem from="1503891335546" duration="33784000" />
       <workItem from="1503977954789" duration="28677000" />
       <workItem from="1504099660038" duration="9702000" />
-      <workItem from="1504274822412" duration="3304000" />
+      <workItem from="1504274822412" duration="4700000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <created>1503973796494</created>
@@ -467,11 +456,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504218478870</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="remaining specs:&#10;- handle campus update&#10;- add links to nav&#10;- add delete/edit buttons  to all campus / single views">
+      <created>1504279709977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1504279709977</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128648000" />
+    <option name="totallyTimeSpent" value="130044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-349" y="-1080" width="1920" height="1080" extended-state="6" />
@@ -536,7 +532,8 @@
     <MESSAGE value="-- Seed file in /server/ for seeding student and campus with dummy data&#10;&#10;-- delete functionality in all student view&#10;&#10;todo: edit , single page for students and campus" />
     <MESSAGE value="-- fixed campus field in db ,&#10;todo : edit, single page views" />
     <MESSAGE value="-- Single view for campus { SHOWS ALL STUDENTS} &#10;  &gt; ADD edit / delete student to view&#10;  &gt; ADD edit / delete campus to view &#10;-- Single view for student&#10;&gt; ADD Edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="-- Single view for campus { SHOWS ALL STUDENTS} &#10;  &gt; ADD edit / delete student to view&#10;  &gt; ADD edit / delete campus to view &#10;-- Single view for student&#10;&gt; ADD Edit" />
+    <MESSAGE value="remaining specs:&#10;- handle campus update&#10;- add links to nav&#10;- add delete/edit buttons  to all campus / single views" />
+    <option name="LAST_COMMIT_MESSAGE" value="remaining specs:&#10;- handle campus update&#10;- add links to nav&#10;- add delete/edit buttons  to all campus / single views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -694,19 +691,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/submitvalidation.jsx" />
     <entry file="file://$PROJECT_DIR$/app/components/submit.jsx" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1">
-            <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/reducers/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -714,13 +698,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Navbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -764,6 +741,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,14 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/models/Students.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -834,14 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/store.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="923">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -897,22 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Schools.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/CreateCampus.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
@@ -921,26 +867,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Main.jsx">
+    <entry file="file://$PROJECT_DIR$/app/components/EditUser.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        <state relative-caret-position="394">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="63" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/store.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Schools.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="52" column="128" lean-forward="false" selection-start-line="52" selection-start-column="128" selection-end-line="52" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/EditCampus.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+        <state relative-caret-position="384">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/EditUser.jsx">
+    <entry file="file://$PROJECT_DIR$/app/components/Main.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="59" />
+        <state relative-caret-position="464">
+          <caret line="29" column="81" lean-forward="true" selection-start-line="29" selection-start-column="81" selection-end-line="29" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="448">
+            <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Navbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -8,6 +8,7 @@ const GET_USERNAME = 'GET_USERNAME'
 const GET_EMAIL = 'GET_EMAIL'
 const GET_NAME = 'GET_NAME'
 const GET_CAMPUS = 'GET_CAMPUS'
+const GET_CAMPUSID = 'GET_CAMPUSID'
 const GET_IMG  = 'GET_IMG'
 const GET_DATA  = 'GET_DATA'
 const GET_DATA1  = 'GET_DATA1'
@@ -19,6 +20,7 @@ const initialState = {
 	email   : '',
 	password: '',
 	campus  : '',
+	campusId  : '',
 	data    : [],
 	data1    : [],
 	image: '',
@@ -28,6 +30,10 @@ const initialState = {
 
 export function updateUsername( username ) {
 	const action = { type: GET_USERNAME, username }
+	return action
+}
+export function getCampusId( campusId ) {
+	const action = { type: GET_CAMPUSID, campusId }
 	return action
 }
 export function getData ( data ) {
@@ -93,6 +99,11 @@ function reducers( state = initialState, action ) {
 	case GET_CAMPUS:
 		return Object.assign({}, state, {
 			campus: action.campus
+		})
+
+	case GET_CAMPUSID:
+		return Object.assign({}, state, {
+			campusId: action.campusId
 		})
 	case GET_IMG:
 		return Object.assign({}, state, {

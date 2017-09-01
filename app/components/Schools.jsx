@@ -23,7 +23,7 @@ export default class Schools extends Component {
 	}
 
 	handleUpdate( evt ) {
-		window.location.href = 'http://localhost:1337/#/updatestudent'
+		window.location.href = 'http://localhost:1337/#/updatecampus'
 	}
 
 
@@ -50,7 +50,7 @@ export default class Schools extends Component {
 					<Media.Body>
 						<Media.Heading> <Link to={`/campusid/${val.id}`}> {val.name} </Link> </Media.Heading>
 						<p>{chance.sentence()}</p>
-						<p><Button bsStyle="info" bsSize="xs" > </Button></p>
+						<p><Button bsStyle="info" bsSize="xs" onClick={this.handleUpdate.bind(this)} > Edit Campus </Button></p>
 						<p><Button bsStyle="danger" bsSize="xs" value={val.id} onClick={this.handleDelete.bind(this)} >Delete</Button>
 						</p>
 					</Media.Body>

@@ -1,6 +1,6 @@
 import { Button, Col, ControlLabel, Form, FormControl, FormGroup } from 'react-bootstrap'
 import React, { Component } from 'react'
-import store, { getCampus, getEmail, postUser, updateUsername, getImg } from '../store'
+import store, { getCampus, getEmail, postUser, updateUsername, getImg, getCampusId } from '../store'
 // import { Form, Field } from 'react-redux-form';
 import { isEmail, isNull } from 'validator'
 import axios from 'axios'
@@ -12,11 +12,11 @@ export default class CreateCampus extends Component {
 
 		this.handleChangeCampusName = this.handleChangeCampusName.bind(this)
 		this.handleChangeImageHREF = this.handleChangeImageHREF.bind(this)
+		this.handleChangeCampus = this.handleChangeCampus.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 	componentDidMount() {
-		console.log(this.state)
 		this.unsubscribe = store.subscribe(() => this.setState(store.getState()))
 		axios.get('/api/authenticate')
 		     .then(res => res.data)
@@ -33,6 +33,12 @@ export default class CreateCampus extends Component {
 
 	}
 
+	handleChangeCampus( evt ) {
+		store.dispatch(getCampusId(evt.target.value))
+		console.log(this.state)
+
+	}
+
 	handleChangeImageHREF( evt ) {
 		store.dispatch(getImg(evt.target.value))
 		console.log(this.state)
@@ -46,9 +52,9 @@ export default class CreateCampus extends Component {
 
 	handleSubmit( event ) {
 		event.preventDefault()
-		const {  campus , image } = this.state
+		const {  campus , image , campusId} = this.state
 
-		axios.post('/api/newcampus', { campus , image })
+		axios.put('/api/updatecampus', { campus , image , campusId})
 		     .then(res => res.data)
 		     .then(this.handleRedirect)
 
@@ -56,6 +62,7 @@ export default class CreateCampus extends Component {
 
 	render() {
 		const handleSubmit = this.handleSubmit
+		const handleChangeCampus = this.handleChangeCampus
 		const handleChangeCampusName = this.handleChangeCampusName
 		const handleChangeImageHREF = this.handleChangeImageHREF
 
@@ -70,8 +77,17 @@ export default class CreateCampus extends Component {
 		return (
 			<Form horizontal onSubmit={handleSubmit}>
 				<h1>Edit a Campus</h1>
-
-				<FormGroup controlId="formHorizontalEmail" onChange={handleChangeCampusName}>
+				<FormGroup controlId="formHorizontalSelectCampus" onChange={handleChangeCampus}>
+					<Col componentClass={ControlLabel} sm={3}>
+						Select Student campus:
+					</Col>
+					<Col sm={10}>
+						<select>
+							{campusOptions}
+						</select>
+					</Col>
+				</FormGroup>
+				<FormGroup controlId="formHorizontalUserName" onChange={handleChangeCampusName}>
 					<Col componentClass={ControlLabel} sm={2}>
 						Enter Campus Name
 					</Col>
@@ -92,7 +108,7 @@ export default class CreateCampus extends Component {
 				<FormGroup>
 					<Col smOffset={2} sm={10}>
 						<Button type="submit">
-							Add Campus !
+							Submit Campus Edit !
 						</Button>
 					</Col>
 				</FormGroup>
@@ -101,4 +117,4 @@ export default class CreateCampus extends Component {
 	}
 }
 
-//
+

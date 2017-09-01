@@ -58,6 +58,21 @@ api.put('/updateuser', (req, res , next)   => {
 
 } )
 
+api.put('/updatecampus', (req, res , next)   => {
+
+	const image =  req.body.image
+	const campus = req.body.campus
+	const campusId = req.body.campusId
+	console.log(req.body)
+	Campus.update({
+		name: campus,
+		image: image
+	}, {
+		where: {id: campusId},
+	}).then(updated => res.json(updated))
+
+} )
+
 
 
 
